@@ -42,14 +42,14 @@ function setActiveLinks(name) {
 
 function updateNav() {
   const scrollY = window.scrollY;
-  const isHome = currentPage === 'home';
 
-  if (isHome && scrollY < 80) {
+  if (scrollY < 80) {
     nav.className = 'transparent';
   } else {
     nav.className = 'scrolled';
   }
 }
+
 
 function openMobileMenu() {
   menuBtn.classList.add('open');

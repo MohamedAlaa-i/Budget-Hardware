@@ -19,6 +19,7 @@ function goPage(name) {
     return;
   }
 
+
   // Multi-file support: navigate to the matching page file
   const fileMap = {
     home: 'index.html',
@@ -85,6 +86,18 @@ window.addEventListener('scroll', () => {
     bg.style.transform = `scale(1.0) translateY(${window.scrollY * 0.25}px)`;
   }
 }, { passive: true });
+
+// Intro image slideshow auto-rotate
+(function() {
+  const slides = document.querySelectorAll('.intro-img-wrap .intro-img');
+  if (!slides.length) return;
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 4000);
+})();
 
 setActiveLinks(currentPage);
 updateNav();

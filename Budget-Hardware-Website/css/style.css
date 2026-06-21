@@ -1,8 +1,8 @@
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
-  --bg: #a4a5a4;
-  --white: #cdcecc;
+  --bg: #c2c1c1;
+  --white: #dfdfdf;
   --ink: #111827;
   --muted: #6B7280;
   --accent: #5E7FA3;
@@ -168,6 +168,17 @@ section { padding: 120px 80px; }
 .section-body { font-size: 16px; color: var(--muted); line-height: 1.8; max-width: 560px; }
 .divider { width: 48px; height: 1px; background: var(--accent); margin-bottom: 40px; }
 
+/* ── HOME: SLIDESHOW ── */
+.slideshow { padding: 0; position: relative; width: 100%; height: 70vh; min-height: 420px; overflow: hidden; }
+.slideshow-track { position: relative; width: 100%; height: 100%; }
+.slide {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+.slide.active { opacity: 1; }
+
 /* ── HOME: INTRO ── */
 .intro { background: var(--white); }
 .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto; }
@@ -175,7 +186,14 @@ section { padding: 120px 80px; }
 .stat-cell { background: var(--bg); padding: 32px; }
 .stat-num { font-family: var(--serif); font-size: 44px; font-weight: 400; color: var(--ink); letter-spacing: -0.02em; }
 .stat-label { font-size: 12px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
-.intro-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+.intro-img-wrap { position: relative; width: 100%; aspect-ratio: 3/4; overflow: hidden; }
+.intro-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+.intro-img.active { opacity: 1; }
 
 /* ── HOME: CATEGORIES STRIP ── */
 .cats-strip { background: var(--bg); }
@@ -195,11 +213,11 @@ section { padding: 120px 80px; }
 .brands-mini { background: var(--white); padding: 80px; }
 .brands-mini-inner { max-width: 1200px; margin: 0 auto; }
 .brands-row { display: flex; justify-content: space-between; align-items: center; margin-top: 60px; flex-wrap: wrap; gap: 40px; }
-.brand-logo { font-family: var(--serif); font-size: 20px; font-weight: 400; color: var(--border); letter-spacing: 0.05em; transition: color 0.3s; cursor: pointer; }
+.brand-logo { font-family: var(--serif); font-size: 20px; font-weight: 400; color: var(--ink); letter-spacing: 0.05em; transition: color 0.3s; cursor: pointer; }
 .brand-logo:hover { color: var(--ink); }
 
 /* ── HOME: FEATURE SPLIT ── */
-.feature-split { background: var(--ink); color: #fff; }
+.feature-split { background: #2a529b; color: #fff; }
 .feature-split-inner { display: grid; grid-template-columns: 1fr 1fr; max-width: 1200px; margin: 0 auto; gap: 80px; align-items: center; }
 .feature-split .section-eyebrow { color: rgba(255,255,255,0.4); }
 .feature-split .section-h2 { color: #fff; }
@@ -210,6 +228,7 @@ section { padding: 120px 80px; }
 .feature-item { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
 .feature-num { font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 0.1em; padding-top: 3px; min-width: 28px; }
 .feature-text { font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+
 
 /* ── ABOUT ── */
 .about-hero { position: relative; width: 100%; height: 70vh; overflow: hidden; }
@@ -270,7 +289,7 @@ section { padding: 120px 80px; }
 /* ── CONTACT ── */
 .contact-hero { background: var(--bg); padding: 160px 80px 80px; }
 .contact-hero .section-h2 { font-size: clamp(40px, 5vw, 64px); }
-.contact-body { background: var(--white); }
+.contact-body { background: #fff; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; max-width: none; }
 .contact-form-side { padding: 80px; }
 .contact-info-side { padding: 80px; background: var(--bg); }
@@ -352,6 +371,7 @@ footer { background: var(--ink); padding: 80px; }
   .nav-links { display: none; }
   .nav-cta { display: none; }
   .nav-menu-btn { display: flex; }
+ 
 
   .hero-h1 { font-size: clamp(36px, 9vw, 52px); }
   .hero-sub { font-size: 15px; }

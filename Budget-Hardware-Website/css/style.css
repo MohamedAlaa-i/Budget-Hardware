@@ -51,7 +51,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); overf
   margin: 0 auto;
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; transition: all 0.5s cubic-bezier(0.16,1,0.3,1); }
-.nav-logo { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--ink); text-decoration: none; letter-spacing: 0.04em; transition: color 0.3s; }
+.nav-logo { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--ink); text-decoration: none; letter-spacing: 0.04em; transition: color 0.3s; cursor: pointer; }
 .nav-links { display: flex; gap: 36px; list-style: none; }
 .nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: var(--ink); text-decoration: none; text-transform: uppercase; transition: color 0.3s, opacity 0.3s; opacity: 0.75; cursor: pointer; }
 .nav-links a:hover { opacity: 1; color: var(--accent); }

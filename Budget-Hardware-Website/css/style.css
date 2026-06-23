@@ -3,7 +3,7 @@
 :root {
   --bg: #dad9d9;
   --white: #f5f5f5;
-  --ink: #111827;
+  --ink: #2a529b;
   --muted: #6B7280;
   --accent: #5E7FA3;
   --accent-h: #4D6E90;
@@ -51,17 +51,12 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); overf
   margin: 0 auto;
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; transition: all 0.5s cubic-bezier(0.16,1,0.3,1); }
-.nav-logo { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--ink); text-decoration: none; letter-spacing: 0.04em; transition: color 0.3s; cursor: pointer; }
+.nav-logo { font-family: var(--serif); font-size: 22px; font-weight: 500; color: #000; text-decoration: none; letter-spacing: 0.04em; transition: color 0.3s; cursor: pointer; }
 .nav-links { display: flex; gap: 36px; list-style: none; }
-.nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: var(--ink); text-decoration: none; text-transform: uppercase; transition: color 0.3s, opacity 0.3s; opacity: 0.75; cursor: pointer; }
+.nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: #000; text-decoration: none; text-transform: uppercase; transition: color 0.3s, opacity 0.3s; opacity: 0.75; cursor: pointer; }
 .nav-links a:hover { opacity: 1; color: var(--accent); }
 .nav-links a.active { opacity: 1; }
-.nav-cta {
-  font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
-  padding: 10px 22px; border: 1px solid var(--ink); border-radius: 100px;
-  background: transparent; color: var(--ink); cursor: pointer;
-  transition: all 0.3s;
-}
+.nav-cta { font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 22px; border: 1px solid var(--ink); border-radius: 100px; background: transparent; color: var(--ink); cursor: pointer; transition: all 0.3s; display: inline-block; }
 .nav-cta:hover { background: var(--ink); color: #fff; }
 
 /* ── MOBILE NAV TOGGLE ── */
@@ -313,7 +308,7 @@ section { padding: 120px 80px; }
 .map-placeholder img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
 
 /* ── FOOTER ── */
-footer { background: var(--ink); padding: 80px; }
+footer { background: #2a529b; padding: 80px; }
 .footer-inner { max-width: 1200px; margin: 0 auto; }
 .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; padding-bottom: 60px; border-bottom: 1px solid rgba(255,255,255,0.1); }
 .footer-brand { font-family: var(--serif); font-size: 24px; color: #fff; font-weight: 400; margin-bottom: 16px; }
@@ -438,5 +433,5 @@ footer { background: var(--ink); padding: 80px; }
 .contact-info-side .info-label { color: #fff; }
 .contact-info-side .info-val { color: #fff; }
 .contact-info-side .hours-row { color: #fff; border-bottom-color: rgba(255,255,255,0.2); }
-.contact-form-side .form-label { color: var(--ink); }
-.contact-form-side .section-eyebrow { color: var(--ink); }
+.contact-form-side .form-label { color: #2a529b !important; }
+.contact-form-side .section-eyebrow { color: #2a529b !important; }

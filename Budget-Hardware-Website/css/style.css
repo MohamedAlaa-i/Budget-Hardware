@@ -272,7 +272,7 @@ section { padding: 120px 80px; }
 .brands-body { background: var(--bg); padding: 100px 80px; }
 .brands-body-inner { max-width: 1200px; margin: 0 auto; }
 .brands-featured { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); }
-.brand-cell { background: var(--white); padding: 60px 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; cursor: pointer; transition: background 0.3s; }
+.brand-cell { background: var(--white); padding: 60px 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; cursor: pointer; transition: background 0.3s; height: 240px; }
 .brand-cell:hover { background: var(--bg); }
 .brand-cell-name { font-family: var(--serif); font-size: 28px; font-weight: 400; color: var(--ink); }
 .brand-cell-tag { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
